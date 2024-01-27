@@ -1,8 +1,17 @@
-import React from 'react'
+import { ThemeProvider, Typography } from "@mui/material"
+import React from "react"
+import theme from "./config/Theme"
+
 
 function App() {
   return (
-    <div>App</div>
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
+<Typography>
+  hello
+</Typography>
+      </ThemeProvider>
+    </React.Fragment>
   )
 }
 
