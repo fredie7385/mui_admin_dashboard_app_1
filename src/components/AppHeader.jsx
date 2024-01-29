@@ -6,11 +6,19 @@ import {
 } from "@mui/icons-material";
 import { AppBar, Badge, Box, IconButton, Toolbar } from "@mui/material";
 import sample_logo from "./../assets/sample-logo.png";
+
+
+
 function AppHeader() {
+  // adding functionality to the sidebar
+
+  
+
+
   return (
-    <AppBar position="sticky" sx={styles.appBar}>
+    <AppBar position="sticky" sx={styles.appBar} trigger={null} collapsible >
       <Toolbar>
-        <IconButton onClick={() => console.log("clicked")} color="secondary">
+        <IconButton color="secondary" >
           <MenuTwoTone />
         </IconButton>
         <Box
@@ -19,7 +27,7 @@ function AppHeader() {
           src={sample_logo}
           alt="Sample Logo"
         />
-        <Box sx={{flexGrow:1}}/>
+        <Box sx={{ flexGrow: 1 }} />
         <IconButton title="Notifications" color="secondary">
           <Badge badgeContent={4} color="error">
             <Notifications />
@@ -32,7 +40,7 @@ function AppHeader() {
           <Logout />
         </IconButton>
       </Toolbar>
-    </AppBar>
+    </AppBar>    
   );
 }
 
