@@ -1,10 +1,9 @@
-import { videos, posts, playlists, lives } from "./../../data/contectData.jsx";
 import { Box, Divider, Tab, Tabs, Typography } from "@mui/material";
 import { useState } from "react";
- import LatestVideoCard from "../../components/LatestVideoCard";
+import LatestVideoCard from "../../components/LatestVideoCard";
 import TabPanel from "../../components/TabPanel";
- import OverviewCharts from "./OverviewCharts";
- import RealTimeCard from "./RealTimeCard.jsx";
+import OverviewCharts from "./OverviewCharts";
+import RealTimeCard from "./RealtimeCard";
 import TopVideosList from "./TopVideosList";
 
 function Analytics() {
@@ -35,9 +34,8 @@ function Analytics() {
                 </Box>
                 <Box>
                     <RealTimeCard />
-                    <LatestVideoCard/> 
+                    <LatestVideoCard/>
                 </Box>
-
             </Box>
         </TabPanel>
         <TabPanel value={value} index={1}>
